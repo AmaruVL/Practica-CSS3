@@ -1,0 +1,25 @@
+Atajos teclado:
+ctrl + k + u -> Comentar sección de código
+
+SELECTORES
+- SELECTORES BÁSICOS
+[href ^= "hsttps"] -> Seleccionar elementos que tengan como atributo href y estos empiezen con hsttps.
+
+[href $= "org"] -> Seleccionar elementos que tengan como atributo href y estos terminen con org.
+
+[href *= "alex"] -> Seleccionar elementos que tengan como atributo href y estos contengan la alex.
+
+- SELECTORES COMBINADORES
+h2, a {...} -> Selecciona a h2 y a. Separar en comas para seleccionar más de un selector.
+
+.contenedor a {...} -> Selecciona los DESCENDIENTES (puede ser hijo, ñieto, vizñieto, etc) a que están en .contenedor.
+
+.contenedor>p {...} -> Selecciona el HIJO directo p cuyo padre es .contenedor.
+
+nav.contenedor {...} -> Selecciona un nav que tenga la clase "contenedor". Nota: nav.contenedor != nav .contenedor
+
+nav.contenedor.titulo {...} -> Selecciona a un nav que tenga la clase "contenedor titulo".
+
+h2+p {...} -> Selecciona al hermano adyacente (seguido) de h2, en este caso p.
+
+h2~p {...} -> Selecciona a todos los hermanos p que están después de h2.
