@@ -23,3 +23,9 @@ nav.contenedor.titulo {...} -> Selecciona a un nav que tenga la clase "contenedo
 h2+p {...} -> Selecciona al hermano adyacente (seguido) de h2, en este caso p.
 
 h2~p {...} -> Selecciona a todos los hermanos p que están después de h2.
+
+BOX MODEL
+margin: 0 auto -> centra la caja solo si es en bloque y con un width definido.
+
+Colapso de margenes -> Cuando 2 o más margenes están juntas, se fucionan y  prevalece el margin con mayor valor.
+Tambien se da cuando un elemento hijo se le da un margen, el padre se apropia del margen.
