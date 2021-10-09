@@ -28,4 +28,11 @@ BOX MODEL
 margin: 0 auto -> centra la caja solo si es en bloque y con un width definido.
 
 Colapso de margenes -> Cuando 2 o más margenes están juntas, se fucionan y  prevalece el margin con mayor valor.
-Tambien se da cuando un elemento hijo se le da un margen, el padre se apropia del margen.
+Tambien se da cuando un elemento hijo se le da un margen, el padre se apropia del margen. Para solucionar esto, se debe interponer una capa entre el hijo y el padre, por ejemplo podemos poner un padding de 0.1px al padre o sino poner un borde transparente
+
+padding: -> Es un shorthand, por defecto incrementa el tamaño de la caja.
+
+box-sizing -> Modifica el comportamiento de la caja.
+    content-box -> Valor por defecto, el width y height se establecen al contenido de la caja, por lo que el tamaño total de la caja se incrementará con el padding y border.
+
+    border-box -> El width y height definen el tamaño total de la caja. El tamaño del contenido se adaptará de acuerdo al padding y border que se le de.
