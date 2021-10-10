@@ -1,6 +1,9 @@
 Atajos teclado:
 ctrl + k + u -> Comentar sección de código
 
+NOTAS:
+- Las imagenes son de tipo inline-block
+
 SELECTORES
 - SELECTORES BÁSICOS
 [href ^= "hsttps"] -> Seleccionar elementos que tengan como atributo href y estos empiezen con hsttps.
@@ -76,6 +79,20 @@ La anterior forma es un shorthand de las siguientes propiedades:
     border-top-width: ;
     border-top-style: ;
     border-top-color: ;
+
+BORDER-RADIUS
+Sirve para redonder las esquinas de una caja. Es un shorthand cuyos valores son a continuación.
+    border-radius: 10px 20px 30px 40px; -> Esquina top-left, top-right, bottom-right, bottom-left respectivamente.
+
+    border-radius: 50px 20px; -> (top-left, bottom-right) y (top-right, bottom-left) respectivamente.
+
+Los propiedades individuales del shorthand son:
+    border-top-left-radius: ;
+    border-top-right-radius: ;
+    border-bottom-left-radius: ;
+    border-bottom-right-radius: ;
+
+Para hacer que la caja sea un circulo, es recomendable usar border-radius: 50%; (en cajas cuadradas).
 
 
 
