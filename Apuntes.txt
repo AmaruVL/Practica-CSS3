@@ -3,6 +3,8 @@ ctrl + k + u -> Comentar sección de código
 
 NOTAS:
 - Las imagenes son de tipo inline-block
+- Al aplicar la prop color en una caja hace que la variable "currentColor" se actualize al color dado.
+Esta variable interviene en el color de bordes, letra, sombras, etc y por defecto es negro.
 
 SELECTORES
 - SELECTORES BÁSICOS
@@ -93,6 +95,26 @@ Los propiedades individuales del shorthand son:
     border-bottom-right-radius: ;
 
 Para hacer que la caja sea un circulo, es recomendable usar border-radius: 50%; (en cajas cuadradas).
+
+BOX-SHADOW
+Añade sombras a la caja. Normalmente usado en el diseño web.
+Sintaxis: 
+    box-shadow: h-offset v-offset blur spread color; -> Donde:
+        h-offset -> Es el desplazamiento horizontal.
+        v-offset -> Es el desplazamiento vertical.
+        blur     -> Que tanto se va a difuminar la sombra.
+        spread   -> Que tanto se va a esparcir la sombra. Tambien se puede entender como que tan grande quieres que sea la sombra.
+        color     -> Color de la sombra.
+
+    Tambien minimo requiere de 2, 3 o 4valores:
+    - box-shadow: h-offset v-offset; -> blur:0, spread: 0, color: currentColor (es una variable y es el color definido en la caja ex: color:crimsom) por defecto.
+    - box-shadow: h-offset v-offset color;
+    - box-shadow: h-offset v-offset blur color;
+
+    Tambien se puede poner más de una sombra en una sola caja separando por comas.
+    box-shadow: 100px 100px 0 0 crimson,
+            100px 0 darkblue,
+            0 100px darkgoldenrod; -> se tiene 3 sombras para una caja.
 
 
 
