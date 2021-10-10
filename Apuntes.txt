@@ -36,3 +36,27 @@ box-sizing -> Modifica el comportamiento de la caja.
     content-box -> Valor por defecto, el width y height se establecen al contenido de la caja, por lo que el tamaño total de la caja se incrementará con el padding y border.
 
     border-box -> El width y height definen el tamaño total de la caja. El tamaño del contenido se adaptará de acuerdo al padding y border que se le de.
+
+HERENCIA, CASCADA Y ESPECIFICIDAD
+display -> define que un elemento es en linea o bloque.
+    inline -> Para que sea elemento en linea. Tienen problemas con el margin top y bottom, no se puede definir un width y un height, no funciona correctamente el padding.
+
+    block -> Para que sea elemento en bloque.
+
+    inline-block -> Para que el elemento funcione en linea y se pueda modificar como si fuera block (modificar width, height, margin-top, margin-bottom, padding, etc). Nota: No se puede centrar usando margin: 0 auto;
+
+    none -> Hace que deseparezca de la página.
+
+- ESPECIFICIDAD
+!important -> Rompe el tema de especificidad, recomendable no usarlo.
+1000 -> inline
+100 -> IDs
+10 -> Clases, atributos, pseudo-clases
+1 -> Elementos, pseudo-elementos
+
+-HERENCIA 
+Hay propiedades que se heredan del padre, incluso en el mismo navegador se puede visualizar que propiedades heredaron del padre.
+Para forzar que algunas propiedades que por defecto no se heredan se hereden, se usa el valor "inherit".
+    ex: border:inherit; -> El hijo hereda el borde que tiene el padre.
+Para que una propiedad que se hereda por defecto no se herede, se usa el valor "initial".
+    ex: color: initial; -> El hijo restablece el valor heredado al valor inicial por defecto del navegador.
