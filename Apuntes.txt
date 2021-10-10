@@ -60,3 +60,23 @@ Para forzar que algunas propiedades que por defecto no se heredan se hereden, se
     ex: border:inherit; -> El hijo hereda el borde que tiene el padre.
 Para que una propiedad que se hereda por defecto no se herede, se usa el valor "initial".
     ex: color: initial; -> El hijo restablece el valor heredado al valor inicial por defecto del navegador.
+
+BORDER 
+border es un shorthand respectivamente de:
+    border-width
+    border-style -> solid, groove, dotted, dashed...
+    border-color
+    A la vez, las 3 propiedades son shorthands, por ejemplo:
+    border-width: 10px 20px 30px 40px;
+
+Tambien se puede realizar cambios de un borde en especifico de la siguiente manera:
+    border-top: 10px solid red; -> Lo mismo para la left, bottom, right.
+
+La anterior forma es un shorthand de las siguientes propiedades:
+    border-top-width: ;
+    border-top-style: ;
+    border-top-color: ;
+
+
+
+
