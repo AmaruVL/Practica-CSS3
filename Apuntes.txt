@@ -121,5 +121,13 @@ Se emplea para mostrar sombras en imagenes con fondos trasparentes. La sintaxis 
     filter: drop-shadow(h-offset v-offset blur color);
     ex: filter: drop-shadow(0 0 40px gray);
 
+COLORES
+- RGB
+- Hexadecimal
+- HSL -> Definido por:
+    hue (matiz) -> Color por la posición en el circulo cromático. [De 0 a 360].
+    saturation (saturacion) -> [De 0% a 100%]
+    lightness (brillo).
+
 
 
