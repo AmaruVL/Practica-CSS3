@@ -116,6 +116,10 @@ Sintaxis:
             100px 0 darkblue,
             0 100px darkgoldenrod; -> se tiene 3 sombras para una caja.
 
+DROP-SHADOW
+Se emplea para mostrar sombras en imagenes con fondos trasparentes. La sintaxis es:
+    filter: drop-shadow(h-offset v-offset blur color);
+    ex: filter: drop-shadow(0 0 40px gray);
 
 
 
