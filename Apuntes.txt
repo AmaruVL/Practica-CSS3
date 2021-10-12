@@ -129,5 +129,11 @@ COLORES
     saturation (saturacion) -> [De 0% a 100%]
     lightness (brillo).
 
+BACKGROUND
+Para realizar cambios en el fondo de un elemento.
+
+background-color -> Dar color de fondo
+background
+
 
 
