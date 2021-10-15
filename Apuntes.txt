@@ -195,7 +195,7 @@ text-shadow -> Sombreado en el texto. Su sintaxis es:
 text-transform -> Para realizar transformaciones en el texto como texto en mayuscula, minuscula, capitalize, etc.
     text-transform: valor; -> Valores: uppercase, lowercase, capitalize
 
-line-height -> Sirva para modificar la altura de cada linea. Un truco para centrar una sola linea en un contenedor es que el height del contenedor y el line-height tengan el mismo valor.
+line-height -> Sirva para modificar la altura de cada linea. Un truco para centrar una sola linea en un contenedor es que el height del contenedor y el line-height tengan el mismo valor. Tambien se puede usar unidades como 1, 1.5, 2, etc.
 
 text-decoration -> Decoracione en el texto como el subrayado, etc. Es un shorthand.
     text-decoration: line style color;
