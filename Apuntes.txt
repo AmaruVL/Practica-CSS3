@@ -133,7 +133,86 @@ BACKGROUND
 Para realizar cambios en el fondo de un elemento.
 
 background-color -> Dar color de fondo
-background
+background-image -> Poner una imagen de fondo (sin modificar background-color)
+    ex: background-image: url(img/sun.png); -> Poner las imagenes (repetidas)
+    background-image: url(img/sun.png), url(img/spidy.png); -> Poner 2 imagenes al mismo tiempo.
+background-repeat -> Para modificar el comportamiento de repetición de background-image.
+    Valores:
+        repeat; -> Valor por defecto, hace que se repita la imagen.
+        no-repeat; -> Hace que no se repita.
+        repeat-x; -> Repertir en eje x
+        repeat-y; -> Repetir en eje y
 
+background-position -> Para posicionar la imagen, tiene los valores de:
+    top, right, left, bottom, center y tambien se puede poner en medidas como por ejemplo 30px, -50px, etc. Sintaxis:
+    background-position: bottom right; -> bottom en eje X y right en eje Y.
 
+    background-position: top 10px right 30px; -> Posicionar en eje X a top y despues mover 10px al lado contrario, lo mismo para el eje Y.
 
+    background-position: top; -> Eje X con top y Eje Y con center por defecto.
+
+background-size -> Permite modificar el tamaño de la imagen de fondo. Tiene los valores de:
+    background-size: 10px; -> Da un width = 10px y height un aspect ratio.
+    background-size: 200px 100px; -> Da un width = 200px y height = 100px.
+    background-size: contain; -> Escala la imagen al mayor tamaño posible sin recortar ni estirar a la imagen.
+    background-size: cover; -> Escala la imagen al mayor tamaño posible sin estirar, pero lo recorta.
+
+background-attachment -> Permite moficicar que tan fijo queremos la imagen de fondo. Se tiene los valores de: 
+    scroll; -> 
+    fixed; -> Tiene valor fijo y el width y height será del 100% del body. Se usa para formar el efecto parallax, efecto hero.
+
+Para colocar gradientes se usa background-image seguido de la funcion linear-gradient.
+    Sintaxis:
+    linear-gradient(direcction, color stop, color stop). 
+    Para definir las direcciones se usa:
+        to top -> De abajo a arriba.
+        to bottom -> De arriba a abajo (Valor por defecto).
+        to right -> Hacia la derecha.
+        to left -> Hacia la izquierda.
+
+        Se puede mezclar como por ejemplo:
+        to top left -> Hacia arriba a la izquierda
+
+        Se puede definir de forma especifica en grados (degrees)
+        20deg -> Girado 20deg.
+    
+    Los stop sirven para indicar a partir de que porcentaje se empezará a degradar.
+        ex: crimsom 30%, blue 40% -> A partir del 30% de la caja degradar crimsom y lo mismo con blue.
+
+    Es posible combinar gradientes con imagenes,para eso primero en la propiedad background-image definir el gradiente y despues la imagen, ex:
+        background-image: linear-gradient(blue, red), url(ruta de la imagen);
+
+TEXTOS
+text-align -> Alinear texto. Si hay una imagen en un contenedor padre, la imagen se comporta como texto y se puede usar esta propiedad (usar la propiedad en el contenedor padre para que funcione).
+
+letter-spacing -> Espaciado de las letras. Acepta valores positivos y negativos.
+
+word-spacing -> Espaciado entre palabras. Acepta valores positivos y negativos.
+
+text-shadow -> Sombreado en el texto. Su sintaxis es:
+    text-shadow: h-offset v-offset blur color;
+
+text-transform -> Para realizar transformaciones en el texto como texto en mayuscula, minuscula, capitalize, etc.
+    text-transform: valor; -> Valores: uppercase, lowercase, capitalize
+
+line-height -> Sirva para modificar la altura de cada linea. Un truco para centrar una sola linea en un contenedor es que el height del contenedor y el line-height tengan el mismo valor.
+
+text-decoration -> Decoracione en el texto como el subrayado, etc. Es un shorthand.
+    text-decoration: line style color;
+    Cuyas propiedades individuales son:
+
+        text-decoration-line -> Tipo de linea que se usará. Valores: underline (linea bajo), overline (linea encima), line-through (tachado), none (nada). Se puede conbinar las lineas como por ejemplo:
+            text-decoration-line: line-through overline underline;
+            text-decoration-line: overline underline;
+        
+        text-decoration-style -> Define el estilo de linea. Tiene valores como solid, double, dotted, dashed, wavy.
+
+        text-decoration-color -> Da un color a la linea.
+
+font-variant -> Permite cambiar la variante de letra entre normal y small-caps.
+
+font-weight -> Sirve para cambiar el grosor de letra (peso). Se puede usar bold o números.
+
+font-size -> Tamaño de fuente. Por defecto las fuentes tienen 16px de tamaño.
+
+font-style -> Estilo de letra, tiene los valores de "italic", "oblique" donde italic es más inclinado que oblique si es que la fuente de letra lo permite.
