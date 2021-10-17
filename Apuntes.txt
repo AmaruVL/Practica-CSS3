@@ -229,6 +229,7 @@ Nota: viewport-> Es todo lo que se ve de la página web.
 viewport width (vw) -> Relativo al tamaño del width del viewport.
 viewport height (vh) -> Relativo al tamaño del height del viewport.
 
+DELIMITANDO MEDIDAS
 min-width -> Sirve para limitar el width a un valor mínimo de un elemento.
 min-height -> Sirve para limitar el height a un valor mínimo de un elemento.
 max-width -> Sirve para limitar el width a un valor máximo de un elemento.
@@ -240,3 +241,28 @@ Nota: Si realizamos lo siguiente:
     min-width: 200px;
     min-height: 200px;
 Sin definir width ni height, la caja tendrá las dimensiones de 400x200 (width x height), tiene 400px de width ya que el div al ser elemento en bloque, ocupará el width máximo que pueda y tiene 200px de height por que por lo general las dimensiones se inicializan del valor minimo.
+
+LISTAS
+Siempre las listas ya sean ordenadas o desordenadas tienen un padding por defecto (que ocupan las viñetas o la numeración), si quitamos el padding, las viñetas o numeración no aparecerán.
+
+list-style -> Define el estilo de la lista. Si se aplica a un elemento ul, cambiaran todos los li que esten dentro. Si se aplica a un li, solo se modificara ese li.
+    list-style: type image position;
+
+    list-style-type -> Define el tipo de viñeta, tiene los valores de: disc (por defecto), decimal (numeracion), square(cuadrados), lower-roman (nros romanos en minuscula), upper-roman (nros romanos en mayuscula), circle, none.
+
+    list-style-img -> Permite agregar imagen como viñeta. Se puede usar iconos.
+        list-style-img: ulr(...);
+
+    list-style-position -> Permite definir la posicion de las viñetas.
+        list-style-position: valor; -> valores: outside (por defecto) [fuera de la caja, en el area del padding], inside (dentro del contenido)
+
+IMAGENES 
+object-fit -> Ajuste del objeto. Tiene los valores de:
+    fill -> Rellena la imagen al contendor estirando la imagen.
+
+    none -> No se realiza ningun cambio, se mantiene en su resolución original.
+
+    contain -> Escalar la imagen al contenedor sin recortarlo.
+
+    cover -> Escala la imagen y recorta la imagen.
+        
