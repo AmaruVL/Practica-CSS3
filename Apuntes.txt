@@ -216,3 +216,27 @@ font-weight -> Sirve para cambiar el grosor de letra (peso). Se puede usar bold 
 font-size -> Tamaño de fuente. Por defecto las fuentes tienen 16px de tamaño.
 
 font-style -> Estilo de letra, tiene los valores de "italic", "oblique" donde italic es más inclinado que oblique si es que la fuente de letra lo permite.
+
+UNIDADES DE MEDIDAS 
+- UNIDADES RELATIVAS
+rem -> depende de la raiz del documento html. Por defecto se definen valores ya definidos en html como viene a ser el font-size = 16px. Si cambias el tamaño de letra en el navegador, rem cambiará de 16px a otro valor de acuerdo al tamaño de letra que seleccione.
+
+em -> Es relativo al tamaño de fuente del padre o del elemento. Cuando cambias el valor del font-size, el em cambia al nuevo valor.
+
+porcentajes -> Los porcentajes toma como base el padre, si a un hijo le das un width del 100%, entonces ocupará todo el width del padré mas no de todo lo body a menos que el padre ocupe todo el body. Es necesario que el width y el height del padre esten definidos absolutameten (ex: usando px)
+
+Nota: viewport-> Es todo lo que se ve de la página web.
+viewport width (vw) -> Relativo al tamaño del width del viewport.
+viewport height (vh) -> Relativo al tamaño del height del viewport.
+
+min-width -> Sirve para limitar el width a un valor mínimo de un elemento.
+min-height -> Sirve para limitar el height a un valor mínimo de un elemento.
+max-width -> Sirve para limitar el width a un valor máximo de un elemento.
+max-height -> Sirve para limitar el height a un valor máximo de un elemento.
+
+Nota: Si realizamos lo siguiente:
+    max-width: 400px;
+    max-height: 400px;
+    min-width: 200px;
+    min-height: 200px;
+Sin definir width ni height, la caja tendrá las dimensiones de 400x200 (width x height), tiene 400px de width ya que el div al ser elemento en bloque, ocupará el width máximo que pueda y tiene 200px de height por que por lo general las dimensiones se inicializan del valor minimo.
