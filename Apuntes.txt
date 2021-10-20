@@ -265,4 +265,76 @@ object-fit -> Ajuste del objeto. Tiene los valores de:
     contain -> Escalar la imagen al contenedor sin recortarlo.
 
     cover -> Escala la imagen y recorta la imagen.
-        
+
+PSEUDOCLASES
+Selecciona el estado de un elemento. Se puede usar de las siguientes maneras:
+    elemento:pseudoclase{...} -> Selecciona de acuerdo a su pseudoclase en el elemento.
+
+    :pseudoclase{...} -> Es como decir "*:pseudoclase". Usualmente utilizado en la pseudoclase root
+    
+    elemento :pseudoclase{...} -> Es equivalente a "elemento *:pseudoclase"
+
+Tipos de pseudoclases:
+    link -> Selecciona a los elementos "a" que no fueron visitados en el navegador.
+    
+    visited -> Selecciona a los elementos "a" que fueron visitados en el navegador.
+
+    hover -> Cuando el cursor está encima del elemento. En caso de un dispositivo movil, hover es cuando se preciona el elemento.
+
+    active -> Cuando se presiona el elemento.
+
+    target -> Selecciona al elemento que fue apuntado por medio de un # o un url.
+
+    focus -> Selecciona el elemento cuando se está activo en el. Por ejemplo en un input o un elemetno con el atributo "contenteditable".
+
+    checked -> Solo funciona para inputs de tipo "radio" y "checkbox". Cuando se realiza un check.
+
+    focus-within -> Selecciona un elemetno que tenga un hijo en el estado focus.
+
+    root -> Selecciona a la raiz del documento html. Normalmente se usa para definir variables.
+
+    not -> Selecciona para filtar. Por ejemplo:
+        h3:not(.title){...} -> Seleccionar a todos los h3 que no tengan la clase title.
+
+        h3:not(:hover){...} -> Seleccionar a todos los h3 que no estan en el estado hover.
+
+        h3:not(.title):not(:hover) -> Seleccionar a todos los h3 que no tengan la clase title y no esten el estado hover
+
+    - PSEUDOCLASES TYPE
+    only-of-type -> Selecciona a los elementos que son únicos en su sección o en su padre. Por ejemplo:
+        .box:only-of-type{...} -> Seleccionar a los únicos elementos en su padre que tengan la clase box.
+
+    first-of-type -> Selecciona al primer elemento de su tipo que esté dentro del contenedor.
+
+    last-of-type -> Selecciona al ultimo elemento de su tipo que esté dentro del contenedor.
+
+    nth-of-type(n) --> Selecciona al n-esimo elemento de su tipo que este dentro del contenedor. Nota: n tambien puede ser los valores de "odd" (impares) y "even" (pares). Ejemplos:
+        .box:nth-of-type(2) -> Seleccionar a los 2dos elementos de su tipo (con la clase "box") que esté dentro del contenedor.
+
+        .box:nth-of-type(odd) -> Seleccionar a los elementos impares de su tipo (con la clase "box") que esté dentro del contenedor.
+
+        Nota: n funciona como iterador y se puede hacer cosas como:
+        .box:nth-of-type(n) -> Seleccionar a los elementos [con n = 0,1,2,... hasta que deje de haber coincidencias] de su tipo (con la clase "box") que esté dentro del contenedor.
+
+        .box:nth-of-type(2n) -> Seleccionar a los elementos [con n = 0,2,4,6,... hasta que deje de haber coincidencias] de su tipo (con la clase "box") que esté dentro del contenedor.
+
+        .box:nth-of-type(2n+1) -> Seleccionar a los elementos [con n = 1,3,5,7,... hasta que deje de haber coincidencias] de su tipo (con la clase "box") que esté dentro del contenedor.
+
+    nth-last-of-type(n) -> Selecciona al n-esimo elemento de su tipo que este dentro del contenedor contando del final al inicio. Nota: n tambien usar como se usa en nth-of-type.
+
+    - PSEUDOCLASES CHILD
+    Son pseudoclases condicionales.
+
+    only-child -> Selecciona a los elementos que son hijos únicos (es decir no tengan hermanos), no importa el tipo.
+
+    first-child -> Selecciona al primer hijo de su contenedor. Por ejemplo:
+        div:first-child{...} -> Selecciona a los elementos div que son los primeros hijos de su contenedor.
+
+    last-child -> Selecciona al ultimo hijo de su contenedor.
+    
+    nth-child(n) -> Selecciona el n-esimo hijo de su contenedor. Los valores de n funciona igual que nth-of-type(n).
+
+    nth-last-child(n) -> Selecciona el n-esimo hijo de su contenedor contando del final al inicio. Los valores de n funciona igual que nth-child(n).
+
+PSEUDOELEMENTOS
+Los pseudoelementos se agregan al final del selector. No describen un estado especial a diferencia de las pseudoclase, sino permiten añadir estilos a una parte concreta del documento o del elemento.
