@@ -337,4 +337,32 @@ Tipos de pseudoclases:
     nth-last-child(n) -> Selecciona el n-esimo hijo de su contenedor contando del final al inicio. Los valores de n funciona igual que nth-child(n).
 
 PSEUDOELEMENTOS
-Los pseudoelementos se agregan al final del selector. No describen un estado especial a diferencia de las pseudoclase, sino permiten añadir estilos a una parte concreta del documento o del elemento.
+Los pseudoelementos se agregan al final del selector. No describen un estado especial a diferencia de las pseudoclase, sino permiten añadir estilos a una parte concreta del documento o del elemento. 
+
+Sintaxis:
+    elemento::pseudoelemento{...}
+
+Tipos de pseudoelementos 
+    selection -> Selecciona a los que seleccionamos con el cursor.
+
+    first-line -> Selecciona a la primera linea de un texto.
+
+    first-letter -> Selecciona la primera letra de un texto.
+
+    placeholder -> Modifica el placeholder del input del atributo type=text.
+
+    - PSEUDOELEMENTOS BEFORE Y AFTER -> Permiten insertar elementos en el navegador sin estar escritos en el html.
+
+    La forma en que los inserta son:
+    <element>
+        ::before
+        Contenido 
+        ::after
+    </element>
+
+    Algunas propiedades empleadas en estos pseudoelementos son:
+        content -> Para colocar el contenido. Puede ser un url (para imagenes) o texto (entre comillas "").
+
+        Los demas que se usan para un elemento. A veces es necesario que se defina el display para que se cree el pseudoelemento.
+        
+         
