@@ -365,4 +365,13 @@ Tipos de pseudoelementos
 
         Los demas que se usan para un elemento. A veces es necesario que se defina el display para que se cree el pseudoelemento.
         
-         
+POSICIONAMIENTO
+- STATIC -> Es el valor por defecto por cada uno de los elementos. Es estático, o sea, no se podrá desplazar el elemento.
+
+- RELATIVE -> Hace que se desbloqueen 4 propiedades para poder moverlo, estos son: top, right, left, bottom. Se llama relative porque se mueve dependiendo de su posición original. Su espacio del elemento se mantiene en el navegador.
+
+- ABSOLUTE -> Similar a relative con la diferencia en que esta propiedad hace que pierda su espacio en el navegador, en cambio relative no. Este si no está posicionado a un padre posicionado (padre con alguna propiedad de posicionamiento diferente de static), por defecto se posiciona con respecto al body.
+
+Propiedad z-index -> Permite cambiar la posición de los elementos de acuerdo al eje Z, puede tomar valores negativos como positivos. Por defecto, tiene el valor "auto". Está propiedad solo funciona con elementos posicionados.
+
+- FIXED -> Tambien al igual que absolute, pierde su espacio en el navegador. Fixed está posicionado con respecto al navegador o viewport (no importa si tiene un padre que esté posicionado)
