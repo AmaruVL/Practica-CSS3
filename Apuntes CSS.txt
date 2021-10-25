@@ -374,4 +374,4 @@ POSICIONAMIENTO
 
 Propiedad z-index -> Permite cambiar la posición de los elementos de acuerdo al eje Z, puede tomar valores negativos como positivos. Por defecto, tiene el valor "auto". Está propiedad solo funciona con elementos posicionados.
 
-- FIXED -> Tambien al igual que absolute, pierde su espacio en el navegador. Fixed está posicionado con respecto al navegador o viewport (no importa si tiene un padre que esté posicionado)
+- FIXED -> Tambien al igual que absolute, pierde su espacio en el navegador. Fixed está posicionado con respecto al navegador o viewport (no importa si tiene un padre que esté posicionado) y se mantiene fijado a pesar de que se use el scroll.
